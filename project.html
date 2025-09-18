@@ -1,0 +1,113 @@
+09.17 11:09 PM
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>InsightStream: Navigate the News Landscape</title>
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--muted:#94a3b8;--accent:#06b6d4}
+    *{box-sizing:border-box}
+    body{font-family:Inter,system-ui,Segoe UI,Roboto,Arial;margin:0;background:linear-gradient(180deg,#071022 0%, #071528 100%);color:#e6eef6;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px;flex-wrap:wrap}
+    header h1{margin:0;font-size:22px;color:var(--accent)}
+    nav{margin-top:8px}
+    nav a{margin:0 8px;text-decoration:none;color:var(--muted);font-size:14px}.hero{background:linear-gradient(135deg,rgba(6,182,212,0.15),rgba(255,255,255,0.05));padding:30px;border-radius:16px;text-align:center;margin-bottom:32px}
+.hero h2{margin:0 0 12px;font-size:26px}
+.hero p{color:var(--muted);margin:0 auto;max-width:620px}
+
+.section{margin-top:32px}
+.section h2{font-size:18px;margin:8px 0 12px;color:var(--muted)}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.card{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);display:flex;flex-direction:column;overflow:hidden}
+.card img{width:100%;height:160px;object-fit:cover;border-radius:10px;margin-bottom:10px}
+.card h3{margin:0 0 6px;font-size:15px}
+.card p{margin:0;color:var(--muted);font-size:13px;line-height:1.4}
+.meta-row{margin-top:8px;font-size:12px;color:var(--muted);display:flex;justify-content:space-between}
+
+footer{margin-top:40px;text-align:center;color:var(--muted);font-size:13px}
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>InsightStream</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#world">World</a>
+      <a href="#business">Business</a>
+      <a href="#technology">Technology</a>
+      <a href="#science">Science</a>
+      <a href="#other">Other</a>
+    </nav>
+  </header>  <section class="hero">
+    <h2>Navigate the News Landscape</h2>
+    <p>InsightStream curates breaking stories, deep analysis, and global headlines with a focus on clarity and discovery.</p>
+  </section>  <section class="section" id="home">
+    <h2>Home</h2>
+    <div class="grid" id="homeGrid"></div>
+  </section>  <section class="section" id="world">
+    <h2>World</h2>
+    <div class="grid" id="worldGrid"></div>
+  </section>  <section class="section" id="business">
+    <h2>Business</h2>
+    <div class="grid" id="businessGrid"></div>
+  </section>  <section class="section" id="technology">
+    <h2>Technology</h2>
+    <div class="grid" id="technologyGrid"></div>
+  </section>  <section class="section" id="science">
+    <h2>Science</h2>
+    <div class="grid" id="scienceGrid"></div>
+  </section>  <section class="section" id="other">
+    <h2>Other</h2>
+    <div class="grid" id="otherGrid"></div>
+  </section>  <footer>
+    © 2025 InsightStream · Navigate the News Landscape
+  </footer>  <script>
+  const categories = {
+    home:[
+      {title:'Local Festival Lights Up the City',excerpt:'Thousands gathered downtown for the annual cultural festival...',img:'https://picsum.photos/id/1001/800/600',author:'H. Reporter',date:'2025-09-17'},
+      {title:'Community Garden Expands',excerpt:'New plots open for residents to grow their own produce...',img:'https://picsum.photos/id/1002/800/600',author:'J. Green',date:'2025-09-16'}
+    ],
+    world:[
+      {title:'Global Climate Accord Reached',excerpt:'World leaders signed a new agreement on emission targets...',img:'https://picsum.photos/id/1003/800/600',author:'I. Stream',date:'2025-09-15'},
+      {title:'Peace Talks Resume in Conflict Zone',excerpt:'Negotiators gather to push for a ceasefire...',img:'https://picsum.photos/id/1004/800/600',author:'K. Global',date:'2025-09-14'}
+    ],
+    business:[
+      {title:'Tech Company IPO Soars',excerpt:'Shares of the latest unicorn jumped 50% on opening...',img:'https://picsum.photos/id/1005/800/600',author:'B. Market',date:'2025-09-15'},
+      {title:'Small Businesses Get Relief Package',excerpt:'Government introduces new measures to support entrepreneurs...',img:'https://picsum.photos/id/1006/800/600',author:'C. Finance',date:'2025-09-14'}
+    ],
+    technology:[
+      {title:'New Smartphone Sets Benchmark',excerpt:'The flagship device boasts cutting-edge features...',img:'https://picsum.photos/id/1008/800/600',author:'T. Tech',date:'2025-09-13'},
+      {title:'AI Breakthrough in Healthcare',excerpt:'AI helps detect diseases with unprecedented accuracy...',img:'https://picsum.photos/id/1009/800/600',author:'D. Digital',date:'2025-09-12'}
+    ],
+    science:[
+      {title:'Space Mission Discovers Water',excerpt:'Scientists confirm subsurface oceans on distant moon...',img:'https://picsum.photos/id/1010/800/600',author:'S. Cosmos',date:'2025-09-11'},
+      {title:'Breakthrough in Cancer Research',excerpt:'New therapy shows promise with fewer side effects...',img:'https://picsum.photos/id/1011/800/600',author:'M. Health',date:'2025-09-10'}
+    ],
+    other:[
+      {title:'Sports Team Wins Championship',excerpt:'The underdogs clinched the title in a thrilling final...',img:'https://picsum.photos/id/1012/800/600',author:'P. Sports',date:'2025-09-09'},
+      {title:'Art Exhibition Opens Downtown',excerpt:'Artists showcase contemporary works exploring identity...',img:'https://picsum.photos/id/1013/800/600',author:'A. Culture',date:'2025-09-08'}
+    ]
+  };
+
+  for(const [cat,articles] of Object.entries(categories)){
+    const grid=document.getElementById(cat+"Grid");
+    articles.forEach(item=>{
+      const card=document.createElement('article');
+      card.className='card';
+      card.innerHTML=`
+        <img loading="lazy" src="${item.img}" alt="${escapeHtml(item.title)}">
+        <h3>${escapeHtml(item.title)}</h3>
+        <p>${escapeHtml(item.excerpt)}</p>
+        <div class="meta-row"><span>${escapeHtml(item.author)}</span><span>${escapeHtml(item.date)}</span></div>
+      `;
+      grid.appendChild(card);
+    });
+  }
+
+  function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;','\'':'&#39;'}[c]));}
+  </script></body>
+</html>
